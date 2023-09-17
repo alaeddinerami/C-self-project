@@ -47,7 +47,7 @@ int main()
         res = 1;
         for ( i = 0; i < num2; i++)
         {
-            res *= num1;
+            res = res * num1;
         }
         printf("%.1lf ^ %.1lf = %.1lf",num1,num2,res);
         break;
