@@ -5,7 +5,7 @@ int main()
     char op;
     double num1,num2,res;
     int i;           
-    printf("\nEnter an operator (+, -, *, /, ^) if want to exit press x: ");
+    printf("\nEnter an operator (+, -, *, /, pow), if want to exit press x: ");
     scanf("%c", &op);
     
     if (op == 'x')
@@ -49,10 +49,10 @@ int main()
         {
             res = res * num1;
         }
-        printf("%.1lf ^ %.1lf = %.1lf",num1,num2,res);
+        printf("%.1lf pow %.1lf = %.1lf",num1,num2,res);
         break;
     }
-}    
+}       
 return 0;    
     
 }
