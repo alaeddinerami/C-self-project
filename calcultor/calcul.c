@@ -10,7 +10,7 @@ int main()
     
     if (op == 'x')
     {
-        return 1; 
+        break; 
     }
     printf("Enter two first and second operand: ");
     scanf("%lf %lf", &num1, &num2);    
