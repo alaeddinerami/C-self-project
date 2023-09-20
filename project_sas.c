@@ -6,7 +6,7 @@ typedef struct{
         char titre[20],des[100],statut[10];
 
 }To_do;
-
+int coun; //bach ikamal min bd
 void Afficher_tache(To_do tach[],int num){
                 for (int i=0; i < num; i++){
                         printf("\nIdentifiant: %d\nTitre: %s\nDescription: %s\nDeadline: %d/%d/%d\nStatut: %s\n", i+1,tach[i].titre, tach[i].des, tach[i].j, tach[i].m, tach[i].a, tach[i].statut);
@@ -15,7 +15,7 @@ void Afficher_tache(To_do tach[],int num){
 
 void Ajouter_tache(To_do tach[],int num){
         int st;
-        for(int i=0; i<num;i++){
+        for(int i=coun; i<coun + num;i++){
 
                 printf("Entez Titre: ");
                 scanf("%s", tach[i].titre);
@@ -43,8 +43,9 @@ void Ajouter_tache(To_do tach[],int num){
                                         goto hna;
                         }
                 }
-
+        coun += num;
 }
+
 int main(){
     while (1)
     {
@@ -62,8 +63,9 @@ int main(){
         printf("6: Modifier une tache: \n");
         printf("7: Modifier une tache: \n");
         printf("8: Statistiques: \n");
+        printf("choisir: ");
         scanf("%d",&ch);
-
+        
         switch(ch){
                 case 1:
                         Ajouter_tache(tach,1);
@@ -74,11 +76,10 @@ int main(){
                         Ajouter_tache(tach,n);
                         break;
                 case 3:
-                        Afficher_tache(tach,n);
+                        Afficher_tache(tach,coun);
                         break;
         }
     }
-
 
 }
 
